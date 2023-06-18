@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>HomeWork</title>
+            
+    <style>
+        body {
+            margin: 20px;
+            justify-content: space-between;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7WI08HHgoxqf8BXQMQnqsbA7lTxYZ29ld0foFnqX9sl5p-P_F0aWW7d8o-d-A0PxrzFI&usqp=CAU);
+        }
+        .chesssboard {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #000000;
+            float: left;
+            margin: 15px;
+        }
+        
+        .square {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .color_1 {
+            background-color: #f0d9b5;
+        }
+        
+        .color_2 {
+            background-color: #b58863;
+        }
+        #chessdboard {
+            border: 1px solid #000000;
+            margin: 15px;
+        }
+        #chessfboard {
+            margin: 15px;
+        }
+    </style>
+        </head>
+        <body>
+            
+    <div class="chesssboard">
+        <script>
+            for (let row = 0; row < 8; row++) {
+                for (let col = 0; col < 8; col++) {
+                    const square = document.createElement("div");
+                    square.classList.add('square');
+                    if ((row + col) % 2 === 0) {
+                        square.classList.add("color_1");
+                    } else {
+                        square.classList.add("color_2");
+                    }
+                    document.querySelector(".chesssboard").appendChild(square);
+                }
+            }
+        </script>
+    </div>
+<canvas id="chessfboard" width="400" height="400"></canvas>
+        <script>
+        
+            const canvass = document.getElementById('chessfboard');
+            const ctx = canvass.getContext('2d');
+        
+            const boardSize   = 8;
+            const squaresSize = canvass.width / boardSize;
+        
+            const lightColor = '#f0d9b5';
+            const darkColor = '#b58863';
+        
+            for (let row = 0; row < boardSize; row++) {
+              for (let col = 0; col < boardSize; col++) {
+                const x = col * squaresSize;
+                const y = row * squaresSize;
+        
+                const color = (row + col) % 2 === 0 ? lightColor : darkColor;
+                ctx.fillStyle = color;
+                ctx.fillRect(x, y, squaresSize, squaresSize);
+              }
+            }
+        
+            const figures = [
+              { symbol: '♜', row: 0, col: 0 }, 
+              { symbol: '♞', row: 0, col: 1 }, 
+              { symbol: '♝', row: 0, col: 2 }, 
+              { symbol: '♛', row: 0, col: 3 }, 
+              { symbol: '♚', row: 0, col: 4 }, 
+              { symbol: '♝', row: 0, col: 5 }, 
+              { symbol: '♞', row: 0, col: 6 }, 
+              { symbol: '♜', row: 0, col: 7 }, 
+              { symbol: '♟', row: 1, col: 0 }, 
+              { symbol: '♟', row: 1, col: 1 }, 
+              { symbol: '♟', row: 1, col: 2 }, 
+              { symbol: '♟', row: 1, col: 3 }, 
+              { symbol: '♟', row: 1, col: 4 }, 
+              { symbol: '♟', row: 1, col: 5 }, 
+              { symbol: '♟', row: 1, col: 6 }, 
+              { symbol: '♟', row: 1, col: 7 }, 
+              { symbol: '♟', row: 6, col: 0 }, 
+              { symbol: '♟', row: 6, col: 1 }, 
+              { symbol: '♟', row: 6, col: 2 }, 
+              { symbol: '♟', row: 6, col: 3 }, 
+              { symbol: '♟', row: 6, col: 4 }, 
+              { symbol: '♟', row: 6, col: 5 }, 
+              { symbol: '♟', row: 6, col: 6 }, 
+              { symbol: '♟', row: 6, col: 7 }, 
+              { symbol: '♜', row: 7, col: 0 }, 
+              { symbol: '♞', row: 7, col: 1 }, 
+              { symbol: '♝', row: 7, col: 2 }, 
+              { symbol: '♛', row: 7, col: 3 }, 
+              { symbol: '♚', row: 7, col: 4 }, 
+              { symbol: '♝', row: 7, col: 5 }, 
+              { symbol: '♞', row: 7, col: 6 }, 
+              { symbol: '♜', row: 7, col: 7 }, 
+            ];
+        
+            const fontSize = squaresSize * 0.8;
+            ctx.font = `${fontSize}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = '#000';
+        
+            for (const figure of figures) {
+              const { symbol, row, col } = figure;
+              const x = (col + 0.5) * squaresSize;
+              const y = (row + 0.5) * squaresSize;
+              ctx.fillText(symbol, x, y);
+            }
+        </script>
+        </body>
+        </html>

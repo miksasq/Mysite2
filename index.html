@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>site</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: sans-serif;
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      background-color: #fff;
+      padding-top: 1rem;
+    }
+
+    /* social links */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+
+    .social-icons>li {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+
+    .social-icons a {
+      position: relative;
+      background-color: #eee;
+      display: block;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      transition: background-color .3s ease-in-out;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: .25rem;
+    }
+
+    .social-icons a:hover {
+      background-color: #e0e0e0;
+    }
+
+    .social-icons a::before {
+      content: "";
+      position: absolute;
+      width: 1.2rem;
+      height: 1.2rem;
+      left: .65rem;
+      top: .65rem;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+    .social-icons .social-icon-instagram::before {
+      background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fitc.ua%2Fnews%2Fv-rabote-facebook-i-instagram-proizoshel-sboj%2F&psig=AOvVaw0HdWZXDutZJGuOa6v4KsSx&ust=1652282479994000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJj61YWe1fcCFQAAAAAdAAAAABAD);}
+
+		header{
+			height: 150px;
+      background-color: crimson;
+		}		
+		#menu{
+			width: 15%;
+			float: left;
+			background: #A4DADA;
+		}
+		#content{
+			width: 85%; 
+			background-color: orange;
+			float: left;
+		}
+		footer{
+			height: 100px;
+			background-color: purple;
+			clear: both;
+			float: bottom;
+		}
+		h1{
+			color: blue;
+			text-shadow: purple 2px 2px;
+			font-size: 75px;
+			text-align: center;
+		}
+		h2{
+			text-align: left;
+			font-family:  'Lobster', cursive;
+			font-size: 50px;
+			font-weight: 650px;
+			font-style: italic;
+			margin: 20px;
+
+		}
+		h3{
+			font-family: 'Brush Script Std', cursive;
+			font-size: 40px;
+			letter-spacing: 7px;
+			margin: 70px;	
+		}
+    h4{
+      font-family: 'Brush Script Std', cursive;
+			font-size: 40px;
+			letter-spacing: 7px;
+			margin: 70px;
+      background-color: darkcyan;
+      height: 70px;
+    }
+		p{
+			text-align: justify;
+			font-size: 25px;
+      font-family: 'Brush Script Std', cursive;
+			text-indent: 20px;
+			line-height: 35px;
+			margin: 20px;
+      background-color: aquamarine;
+		}
+		.closing-button {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  box-shadow: 0 0 0 2px white;
+  padding: 20px 0;
+  width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.closing-button span {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  z-index: 5;
+}
+.closing-button:before, .closing-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.closing-button:before {
+  transform: translateX(-100%);
+  background: white;
+  transition: transform .3s cubic-bezier(.55, .055, .675, .19);
+}
+.closing-button:after {
+  background: #413ad5;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(.16, .73, .58, .62) .3s;
+}
+.closing-button:hover:before, .closing-button:hover:after {
+  transform: translateX(0);
+}			
+	</style>
+</head>
+<body>
+<header><h1>Мій перший досвіт</h1></header>
+<div id="menu">
+	<h2>Мої роботи</h2>
+	<a href="function1.html" class="closing-button" target="blank"><span>Function</span></a>
+	<a href="paint1.html" class="closing-button" target="blank"><span>Circles</span></a>
+	<a href="triangle.html" class="closing-button" target="blank"><span>Triangle</span></a>
+	<a href="bancomat.html" class="closing-button" target="blank"><span>Bancomat</span></a>
+	<a href="test.html" class="closing-button" target="blank"><span>Test</span></a>
+	<a href="stickers.html" class="closing-button" target="blank"><span>Stickers</span></a>
+	<a href="fib.html" class="closing-button" target="blank"><span>Fib</span></a>
+	<a href="discount.html" class="closing-button" target="blank"><span>Discount</span></a>
+	<a href="compliment.html" class="closing-button" target="blank"><span>Compliments</span></a>
+	<a href="chess.html" class="closing-button" target="blank"><span>Chess</span></a>
+	<a href="dino.html" class="closing-button" target="blank"><span>Dino</span></a>
+	<a href="paint.html" class="closing-button" target="blank"><span>Paint</span></a>
+</div> 
+<div>
+  <h4>Про мене</h4>
+    <p>Мене звати Павленко Максим. Мені 15 років, вчусь я в гімназії "Троєщина" і звісно ж живу на Троещині. Раніше я займався футболом, але зараз я пов'язав своє життя з комп'ютером, тому почав ходити на різні курси та вчитись чому новому. Також я просто граю в комп'ютер, там в різні ігри чи дивлюсь на ньому відео, фільми, серіали чи аніме. Ще я почав ходити в спорт зал. Ось, це начебто все що про мене треба знати! Ще я хочу додати сюди інформацію про місто в якому я живу - Київ!</p>
+    <h4>Київ</h4>
+    <p>Ки́їв (МФА: [ˈkɪjiu̯] ( прослухати), англ. Kyiv [ˈkiːɪv]) — столиця та найбільше місто України. Розташований у середній течії Дніпра, у північній Наддніпрянщині. Політичний, соціально-економічний, транспортний, освітньо-науковий, історичний, культурний та духовний центр України. У системі адміністративно-територіального устрою України Київ має спеціальний статус, визначений Конституцією, і не входить до складу жодної області, хоча і є адміністративним центром Київської області[8]. Місце розташування центральних органів влади України, іноземних місій, штаб-квартир більшості підприємств і громадських об'єднань, що працюють в Україні.
+
+      За «Повістю временних літ», Київ заснував полянський князь Кий зі своїми братами Щеком і Хоривом та сестрою Либіддю. Згідно з археологічними даними та писемними джерелами, початок безперервного розвитку Києва датується 2-ю половиною V ст. — 1-ю половиною VI ст.; осередком розширення Києва була гора Замкова[2]. Протягом своєї історії місто було столицею полян, Русі[a] і України[b], а також адміністративним центром однойменних князівства, землі, воєводства, повіта, полку, намісництва, губернії, округи, района, генеральної округи, і зокрема православної митрополії, генерал-губернаторства і військової округи.
+      
+      Один із найстаріших історичних центрів Східної Європи та християнства — Софійський собор та Києво-Печерська лавра – внесені до списку Світової спадщини ЮНЕСКО.</p>
+     <h4>Етимологія</h4> 
+     <p>Згідно з легендами, назва Києва походить від імені Кия — найстаршого з трьох братів, яких вважають засновниками міста. Одна з цих легенд дійшла до нас у літописі XII ст. «Повість временних літ»[3].
+
+      У сагах Київ називався Koenugarðr[9]. Назва Kænugarður (Кьяйнуґардур) залишилася за Києвом в ісландській мові[10][11]. Є версія, що походження назви Kænugarður пов'язане з давньоісландським словом «kæna», що мало значення «човен». Це дозволяє трактувати назву Києва як «місто човнів», що відповідало реальності в Х-ХІІ століттях, коли через нього пролягав великий водний шлях з Варягів у Греки.[12] З 27 квітня 2022 року у Рейкʼявіку зʼявилась невеличка площа Kænugarður / Kyiv-torg[13][14].
+      
+      Київ також мав тюркську назву — «Манкермен» («велике місто»), «Ківа-Манкермен», котра побутувала поряд з оригінальною назвою[15][16].
+      
+      Український етнограф М. В. Закревський стверджував, що згаданий Клавдієм Птолемеєм «Азагаріум» розташовувався на місці сучасного Києва. Ю. А. Кулаковський ототожнював з Києвом Птолемеїв «Метрополь», М. Ю. Брайчевський — «Сар»[17].
+      
+      За арабськими та перськими джерелами IX—X століття один із державних центрів східнослов'янських утворень звався Куявія (Куябія, Куяба). Найбільш логічно обґрунтованим є ототожнення міста Куйаби з Києвом[18][19].</p>
+</div>
+<footer><h3>Павленко Максим <ul class="social-icons">
+  <li><a class="social-icon-instagram" href="#" title="..." target="_blank" rel="noopener"></a></li>
+  <li><a class="social-icon-telegram" href="#" title="..." target="_blank" rel="noopener"></a></li>
+</ul></h3></footer>
+</body>
+</html>

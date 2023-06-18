@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            text-align: center;
+            background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg);
+            font-size: 40px;
+            color: yellow;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ let n = +prompt("Enter порядковий номер");
+function fib(n) {
+   
+    let a = +prompt("Enter first number");
+    let b = +prompt("Enter second number");
+    for (let i = 3; i <= n; i++) {
+        let c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
+}
+
+document.write(fib(n));
+
+</script>
+</body>
+</html>

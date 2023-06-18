@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: blueviolet;
+            font-size: 40px;
+            font-style: oblique;
+        }
+    </style>
+    <title>HomeWork else triangle</title>
+</head>
+<body>
+    <script>
+        let a = + prompt("Enter side a", "3");
+        let b = + prompt("Enter side b", "4");
+        let c = + prompt("enter side c", "5");
+        if (a<=0 || b<=0 || c<=0)
+        if ((a + b) < c ) {document.write ("folse")
+        end}
+            else if ((b + c) <  a ) {document.write ("folse")
+        end}
+            else if ((c + a ) < b ) {document.write ("folse")
+        end}
+            
+        let P = a + b + c;
+        let p = P/2;
+        let S = Math.sqrt (p * (p-a) * (p-b) * (p-c));
+        document.write("Perimetr triangle " + "( a "  + " b " + " c )"  + " equals " + P + "<br>");
+        document.write("Area triangle " + "( a + b + c )"  + " equals " + S + "<br>");
+    </script>
+</body>
+</html>

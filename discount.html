@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+    <script>
+    
+    let sum = +prompt("Enter сумма покупки?");
+    if (checkSum(sum)) {
+        alert("Ваша знижка  20%");
+    }   else {
+        alert("Якось маловато, піди візьми ще")
+    }
+    
+function checkSum(sum) {
+    if (sum > 1000) {
+        return true;
+    }   else{
+            return confirm ("Для знижки вам необхідно вибрати ще товарів на суммі бульше 1000 грн. Продовжимо?"); }
+    }
+    </script>
+</body>
+</html>

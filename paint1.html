@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #triangle{
+            background-color: coral;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="triangle" width="1900px" height="960px"></canvas>
+    <script>
+    
+
+/*let canvas = document.getElementById('triangle');
+let ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.arc(200, 200, 100, 50, 0, 2 * Math.PI, false);
+ctx.closePath();
+ctx.fillStyle = "black";
+ctx.fill();*/
+
+let times = +prompt("How many circles do you want?");
+let canvas = document.getElementById('triangle');
+let ctx = canvas.getContext('2d');
+
+for (let i = 0; i < times; i++) {
+  let x = Math.random() * canvas.width;
+  let y = Math.random() * canvas.height;
+  let radius = Math.random() * 50 + 50;
+  let borderWidth = Math.random() * 10 + 1;
+
+  let redBorder = Math.floor(Math.random() * 256);
+  let greenBorder = Math.floor(Math.random() * 256);
+  let blueBorder = Math.floor(Math.random() * 256);
+  let borderColor = `rgb(${redBorder}, ${greenBorder}, ${blueBorder})`;
+
+  let redFill = Math.floor(Math.random() * 256);
+  let greenFill = Math.floor(Math.random() * 256);
+  let blueFill = Math.floor(Math.random() * 256);
+  let fillColor = `rgb(${redFill}, ${greenFill}, ${blueFill})`;
+
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+  ctx.closePath();
+
+  ctx.lineWidth = borderWidth;
+  ctx.strokeStyle = borderColor;
+  ctx.stroke();
+
+  ctx.fillStyle = fillColor;
+  ctx.fill();
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
